@@ -47,8 +47,9 @@ public class Funcionario {
 		this.tipo = tipo;
 	}
 	
+	//	Sobre-escritura de metodos
 	public double getBonificacion() {
-		return this.salario * 0.1;		
+		return this.salario * 0.05;
 	}
 
 }
