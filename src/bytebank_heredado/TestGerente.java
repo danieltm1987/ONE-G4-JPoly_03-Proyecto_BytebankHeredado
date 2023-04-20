@@ -7,7 +7,7 @@ public class TestGerente {
 		//gerente.setSalario(5000);
 		
 		//Funcionario gerente = new Funcionario();
-		gerente.setSalario(6000);
+		gerente.setSalario(61000);
 		gerente.setTipo(1);
 		
 		System.out.println("Bonificacion del Gerente:"+gerente.getBonificacion());

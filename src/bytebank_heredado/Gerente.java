@@ -13,5 +13,8 @@ public class Gerente extends Funcionario  {
 		return this.clave == clave_ingresada;
 	}	
 	
+	public double getBonificacion() {
+		return super.getSalario();
+	}
 
 }
