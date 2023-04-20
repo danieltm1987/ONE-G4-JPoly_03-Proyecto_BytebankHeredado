@@ -37,6 +37,11 @@ public class Funcionario {
 		return this.salario *0.1;
 	}
 	
+	public void setSalario2(double salario2) {
+		this.salario = salario2;
+		
+	}
+	
 	
 	
 
