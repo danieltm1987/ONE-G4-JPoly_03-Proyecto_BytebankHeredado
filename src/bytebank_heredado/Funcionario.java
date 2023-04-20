@@ -26,6 +26,11 @@ public class Funcionario {
 	public String getDocumento() {
 		return documento;
 	}
+	
+	public void setDocumento (String nuevodoc) {
+		this.documento = nuevodoc;
+	}
+	
 	public double getSalario() {
 		return salario;
 	}
