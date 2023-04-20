@@ -5,6 +5,7 @@ public class Funcionario {
 	private String nombre;
 	private String documento;
 	private double salario;
+	private int tipo;
 	
 	public Funcionario() {
 		// TODO Auto-generated constructor stub
@@ -32,17 +33,26 @@ public class Funcionario {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+
+	public int getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
+	}
 	
 	public double getBonificacion() {
-		return this.salario *0.1;
-	}
-	
-	public void setSalario2(double salario2) {
-		this.salario = salario2;
+		//Si tipo es igual a 1 --> es gerente
+		//Si tipo es igual a 0 --> es funcionario
+		if (tipo ==0) {
+			return this.salario * 0.1;			
+		} else if (tipo == 1) {
+			return this.salario;
+		}else {
+			return 0;
+		}
 		
 	}
-	
-	
-	
 
 }
