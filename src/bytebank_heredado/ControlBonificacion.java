@@ -11,6 +11,9 @@ public class ControlBonificacion {
 		return this.suma;
 	}
 	
+	//Polimorfismo con Funcionario ya que Gerente y contador son clases hijas de Funcionario.
+	//Los metodos seguiran funcionando ya que Gerente es un Funcionario y Contador es un Funcionario.
+	/*
 	public double registrarSalario(Gerente gerente) {
 		this.suma = gerente.getBonificacion()+this.suma;
 		System.out.println("Suma :"+this.suma);
@@ -24,4 +27,5 @@ public class ControlBonificacion {
 		
 		return this.suma;
 	}
+	*/
 }

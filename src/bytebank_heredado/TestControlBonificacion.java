@@ -14,7 +14,7 @@ public class TestControlBonificacion {
 		
 		ControlBonificacion controlB = new ControlBonificacion();
 		
-		controlB.registrarSalario(daniel);		
+		controlB.registrarSalario(daniel);
 		controlB.registrarSalario(adriana);
 		controlB.registrarSalario(delfy);
 		
