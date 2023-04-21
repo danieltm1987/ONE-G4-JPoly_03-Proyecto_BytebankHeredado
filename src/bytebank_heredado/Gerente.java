@@ -11,7 +11,11 @@ public class Gerente extends Funcionario  {
 	
 	public boolean iniciarSesion(String clave_ingresada) {
 		return this.clave == clave_ingresada;
-	}	
+	}
+	
+	public boolean iniciarSesion(String login, String clave_ingresada) {
+		return this.clave == clave_ingresada;
+	}
 	
 	// Sobre-escritura de metodos
 	public double getBonificacion() {
