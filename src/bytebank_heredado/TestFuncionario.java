@@ -3,7 +3,9 @@ package bytebank_heredado;
 public class TestFuncionario {
 
 	public static void main(String[] args) {
-		Funcionario daniel = new Funcionario("1047218293", 6000000.0);
+		Funcionario daniel = new Contador();
+		daniel.setDocumento("1047218293");
+		daniel.setSalario(6000000.0);		 
 		daniel.setNombre("Daniel Alfonso Torres Martinez");
 		daniel.setTipo(0);
 		

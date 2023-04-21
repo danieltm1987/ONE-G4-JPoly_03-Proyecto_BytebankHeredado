@@ -12,5 +12,10 @@ public class CuentaCorriente extends Cuenta {
 	
 		return super.retirar(saldo + comision);
 	}
+	
+	@Override
+	public void depositar(double saldo) {
+		this.saldo += saldo;		
+	}
 
 }

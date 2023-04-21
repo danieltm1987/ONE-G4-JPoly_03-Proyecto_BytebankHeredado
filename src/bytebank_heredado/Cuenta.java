@@ -1,8 +1,8 @@
 package bytebank_heredado;
 
-public class Cuenta {
+public abstract class Cuenta {
 	
-	private double saldo; 
+	protected double saldo; 
 	private int agencia;
 	private int numero;
 	private Cliente titular;
@@ -76,9 +76,18 @@ public class Cuenta {
 		this.titular2 = titular2;
 	}
 	
+	
+	public abstract void depositar(double saldo);
+	
+	/*
+	 * Se vuelve el metodo Abstracto
+	 * 
 	public void depositar(double saldo){
-		this.saldo += saldo; 		
+		this.saldo += saldo;	
 	}
+	 * 
+	 */
+	
 
 	public boolean retirar(double saldo) {
 		
