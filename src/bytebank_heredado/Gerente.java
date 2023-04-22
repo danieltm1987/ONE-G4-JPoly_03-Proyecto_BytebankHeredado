@@ -1,9 +1,9 @@
 package bytebank_heredado;
 
 //					Extiende de Funcionario
-public class Gerente extends Funcionario  {
+public class Gerente extends FuncionarioAutenticable  {
 	
-	private String clave;
+	private String clave = "12345";
 	
 	public void setClave(String new_clave) {
 		this.clave = new_clave;
@@ -18,9 +18,10 @@ public class Gerente extends Funcionario  {
 	}
 	
 	// Sobre-escritura de metodos
+	@Override
 	public double getBonificacion() {
 		System.out.println("Ejecutando desde GERENTE");
-		return super.getSalario()+this.getBonificacion()*0.5;
+		return 2000;
 	}
 
 }

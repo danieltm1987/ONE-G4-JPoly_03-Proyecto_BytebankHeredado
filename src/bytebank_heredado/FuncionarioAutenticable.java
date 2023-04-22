@@ -1,6 +1,6 @@
 package bytebank_heredado;
 
-public class FuncionarioAutenticable {
+public class FuncionarioAutenticable extends Funcionario {
 	
 	private String clave;
 	
@@ -9,11 +9,17 @@ public class FuncionarioAutenticable {
 	}
 	
 	public boolean iniciarSesion(String clave_ingresada) {
-		return this.clave == clave_ingresada;
+		return this.clave == "12345";
 	}
 	
 	public boolean iniciarSesion(String login, String clave_ingresada) {
 		return this.clave == clave_ingresada;
+	}
+
+	@Override
+	public double getBonificacion() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
