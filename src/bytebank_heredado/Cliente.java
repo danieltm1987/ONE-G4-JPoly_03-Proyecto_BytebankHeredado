@@ -1,6 +1,6 @@
 package bytebank_heredado;
 
-public class Cliente extends Autenticable {
+public class Cliente implements Autenticable {
 	private String documento;
 	private String telefono;
 	private String nombre;
@@ -29,6 +29,22 @@ public class Cliente extends Autenticable {
 	}
 	public void setProfesion(String profesion) {
 		this.profesion = profesion;
+	}
+	
+	@Override
+	public void setClave(String new_clave) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public boolean iniciarSesion(String clave_ingresada) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean iniciarSesion(String login, String clave_ingresada) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	
