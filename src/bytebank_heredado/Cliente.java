@@ -1,10 +1,16 @@
 package bytebank_heredado;
 
 public class Cliente implements Autenticable {
+	
 	private String documento;
 	private String telefono;
 	private String nombre;
-	private String profesion;
+	private String profesion;	
+	private AutenticacionUtil util;	
+	
+	public Cliente() {
+		this.util = new AutenticacionUtil();		
+	}
 	
 	public String getDocumento() {
 		return documento;
@@ -33,20 +39,11 @@ public class Cliente implements Autenticable {
 	
 	@Override
 	public void setClave(String new_clave) {
-		// TODO Auto-generated method stub
-		
+		this.util.setClave(new_clave);		
 	}
+	
 	@Override
 	public boolean iniciarSesion(String clave_ingresada) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.util.iniciarSesion(clave_ingresada);		
 	}
-	@Override
-	public boolean iniciarSesion(String login, String clave_ingresada) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
-	
-	
 }
