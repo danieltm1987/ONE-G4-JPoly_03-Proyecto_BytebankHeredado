@@ -1,6 +1,6 @@
 package bytebank_heredado;
 
-public class Administrador extends FuncionarioAutenticable {
+public class Administrador extends Autenticable {
 
 	public Administrador() {
 		// TODO Auto-generated constructor stub

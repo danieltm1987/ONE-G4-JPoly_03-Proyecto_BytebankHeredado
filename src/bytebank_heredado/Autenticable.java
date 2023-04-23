@@ -1,6 +1,6 @@
 package bytebank_heredado;
 
-public class FuncionarioAutenticable extends Funcionario {
+public class Autenticable extends Funcionario {
 	
 	private String clave;
 	

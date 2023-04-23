@@ -1,7 +1,7 @@
 package bytebank_heredado;
 
 //					Extiende de Funcionario
-public class Gerente extends FuncionarioAutenticable  {
+public class Gerente extends Autenticable  {
 	
 	private String clave = "12345";
 	
