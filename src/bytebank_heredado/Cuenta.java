@@ -89,24 +89,25 @@ public abstract class Cuenta {
 	 */
 	
 
-	public boolean retirar(double saldo) {
+	public void retirar(double saldo)throws SaldoInsuficienteException {
+		System.out.println("Retiro por "+saldo+" en proceso...");		
 		
-		System.out.println("Retiro por "+saldo+" en proceso...");
-		
-		if(this.saldo >= saldo) {
-			this.saldo -= saldo;
-			System.out.println("valor retirado :"+saldo);
-			return true;
-		}else {
-			System.out.println("Fondos Insuficientes");
-			return false;
+		if(this.saldo < saldo) {
+			throw new SaldoInsuficienteException("No tiene saldo");			
 		}
+		this.saldo -= saldo;
+		System.out.println("Retiro por "+saldo+" Exitoso !!!");
 	}
 	
 	public boolean transferir(double valor, Cuenta destino) {
 		System.out.println("Transferencia por "+valor+" en proceso...");
 		if(this.saldo >= valor) {
-			this.retirar(valor);
+			try {
+				this.retirar(valor);
+			} catch (SaldoInsuficienteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			destino.depositar(valor);
 			
 			return true;
